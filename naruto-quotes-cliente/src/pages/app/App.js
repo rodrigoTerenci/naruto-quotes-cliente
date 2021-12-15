@@ -1,13 +1,13 @@
 import logo from '../../images/logo.svg'
 import narutoImg from '../../images/narutoKunai.png'
 import styled from 'styled-components'
-import './App.css';
+import './App.css'
+import {Quotes} from '../../components'
 
 function App() {
   return (
     <Content>
-      <p role='p'>dkt--77-0k - Speaker</p>
-      <button>Quote No Jutsu</button>
+      <Quotes quote={'OK'} speaker={'Speaker'}/>
       <NarutoImg src={narutoImg} alt='Naruto with a Kunai'/>
     </Content>
   );

@@ -3,7 +3,7 @@ import App from './App';
 
 test('renders the app with a button, a quote and a img', () => {
   render(<App />);
-  const textEl = screen.findByText(/Speaker/)
+  const textEl = screen.findByText(/Speaker/i)
   const imgEl = screen.getByRole('img')
   const buttonEl = screen.getByRole('button')
 
@@ -11,6 +11,5 @@ test('renders the app with a button, a quote and a img', () => {
   expect(imgEl).toBeInTheDocument()
   expect(buttonEl).toBeInTheDocument()
 
-  /*const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();*/
+
 });
