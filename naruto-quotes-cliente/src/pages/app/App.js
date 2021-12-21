@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import './App.css'
 import {Quotes} from '../../components'
 
+
 function App() {
   return (
     <Content>
-      <Quotes quote={'OK'} speaker={'Speaker'}/>
+      <Quotes quote={'Ok'} speaker={'Speaker'}/>
       <NarutoImg src={narutoImg} alt='Naruto with a Kunai'/>
     </Content>
   );

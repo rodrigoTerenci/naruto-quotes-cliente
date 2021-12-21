@@ -1,8 +1,36 @@
+import styled from "styled-components"
+import { string } from 'prop-types'/*tipar propriedades*/ 
+import { Button } from '../button'
+
 export const Quotes = ({quote, speaker}) => {
     return(
-       <div>
-        <p role='p'>{quote}</p><p>{speaker}</p>
-        <button>Quote No Jutsu</button>
-       </div> 
+       <Wrapper>
+        <Quote>{quote}</Quote>
+        <Speaker>{speaker}</Speaker>
+        <Button>Quote No Jutsu</Button>
+       </Wrapper> 
     )
 }
+/*tipar propriedades*
+* o tipo string é esperado*/ 
+Quotes.propTypes = {
+    quote:string,
+    speaker: string
+}
+const Wrapper = styled.div`
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-item: center;
+`
+
+const Quote= styled.p`
+    font-size: 2em;
+    flex: 1;
+    margin: 0;
+`
+
+const Speaker = styled(Quote)`
+    text-align:right;
+    margin-bottom: 50px;
+`
