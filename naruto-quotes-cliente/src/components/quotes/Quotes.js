@@ -25,8 +25,7 @@ const Wrapper = styled.div`
 `
 
 const Quote= styled.p`
-    font-size: 2em;
-    flex: 1;
+    font-size: 0.85em;
     margin: 0;
 `
 
