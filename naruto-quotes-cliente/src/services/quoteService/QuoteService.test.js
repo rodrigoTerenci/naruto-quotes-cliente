@@ -1,6 +1,6 @@
 import { rest } from 'msw'
 import{ setupServer } from 'msw/node'
-import { getQuote } from './quoteService'
+import { getQuote } from './QuoteService'
 
 const response = {test:'testing'}
 

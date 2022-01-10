@@ -3,12 +3,23 @@ import narutoImg from '../../images/narutoKunai.png'
 import styled from 'styled-components'
 import './App.css'
 import {Quotes} from '../../components'
-
+import { getQuote } from '../../services'
+import { useState } from 'react'
 
 function App() {
+  const [quoteState, setQuoteState]= useState({
+    quote:'ok', speaker:'Speaker'
+  })
+  const onUpdate = async () =>{
+    const quote = await getQuote()
+    setQuoteState(quote)
+  }
   return (
     <Content>
-      <Quotes quote={'Ok'} speaker={'Speaker'}/>
+      <Quotes 
+      /*quote={quoteState.quote} speaker={quoteState.speaker} */
+      {...quoteState}/*operador spread*/
+      onUpdate={onUpdate}/>
       <NarutoImg src={narutoImg} alt='Naruto with a Kunai'/>
     </Content>
   );
