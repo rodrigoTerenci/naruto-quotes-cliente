@@ -4,22 +4,32 @@ import styled from 'styled-components'
 import './App.css'
 import {Quotes} from '../../components'
 import { getQuote } from '../../services'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react' /*HOOKS*/
 import  jutsoSound  from '../../sound/jutsoSound.mp3'
 
 const audio = new Audio(jutsoSound)
 function App() {
+  
+  const isMounted=useRef(true)/*mantém estado da váriavel mesmo após render*/
+  
   useEffect(()=>{
     onUpdate()
+    return ()=>{
+      isMounted.current=false
+    }
   },[])
   const [quoteState, setQuoteState]= useState({
-    quote:'ok', speaker:'Speaker'
+    quote:'loading quote ...',
+    speaker:'loading speaker ...'
   })
   
   const onUpdate = async () =>{
-    audio.play()
+   
     const quote = await getQuote()
-    setQuoteState(quote)
+    if(isMounted.current){
+      audio.play()
+      setQuoteState(quote)
+    }
     
   }
   return (

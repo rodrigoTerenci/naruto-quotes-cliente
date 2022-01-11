@@ -13,6 +13,7 @@ const server = setupServer(
 beforeAll(()=> server.listen())
 afterEach(()=> server.resetHandlers())
 afterAll(()=> server.close())
+
 test('transform json response into object', async () =>{
     const quote = await getQuote()
     expect(quote).toStrictEqual(response)
