@@ -6,7 +6,7 @@ export const Quotes = ({quote, speaker, onUpdate}) => {
     return(
        <Wrapper>
         <Quote>{quote}</Quote>
-        <Speaker>{speaker}</Speaker>
+        <Speaker>- {speaker}</Speaker>
         <Button onClick={onUpdate}>Quote No Jutsu</Button>
        </Wrapper> 
     )
@@ -28,6 +28,7 @@ const Wrapper = styled.div`
 const Quote= styled.p`
     font-size: 1em;
     margin: 0;
+    text-shadow: 2px 2px 2px black;
 `
 
 const Speaker = styled(Quote)`

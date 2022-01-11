@@ -4,15 +4,23 @@ import styled from 'styled-components'
 import './App.css'
 import {Quotes} from '../../components'
 import { getQuote } from '../../services'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import  jutsoSound  from '../../sound/jutsoSound.mp3'
 
+const audio = new Audio(jutsoSound)
 function App() {
+  useEffect(()=>{
+    onUpdate()
+  },[])
   const [quoteState, setQuoteState]= useState({
     quote:'ok', speaker:'Speaker'
   })
+  
   const onUpdate = async () =>{
+    audio.play()
     const quote = await getQuote()
     setQuoteState(quote)
+    
   }
   return (
     <Content>
@@ -34,7 +42,7 @@ const Content = styled.div`
   align-items: center;
 `;
 const NarutoImg = styled.img`
-  max-width: 50vw;
+  width: 50vw;
   align-self: flex-end;
 `;
 export default App;

@@ -44,3 +44,9 @@ test('call api on button click and update its text', async ()=>{
 
  expect(quoteEl).toBeInTheDocument()
 })
+
+test('calls an api on startup and renders it response', ()=>{
+  render(<App />)
+  const quoteEl = await screen.findByText(response.quote)
+  expect(quoteEl).toBeInTheDocument()
+})
