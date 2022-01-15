@@ -9,6 +9,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'New Tegomin', serif;
-    font-size:1.3em;
+    font-size:1.3m;
   }
 `

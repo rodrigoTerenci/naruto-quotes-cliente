@@ -1,4 +1,4 @@
-import logo from '../../images/logo.svg'
+import logo from '../../images/naruto.png'
 import narutoImg from '../../images/narutoKunai.png'
 import styled from 'styled-components'
 import './App.css'
@@ -34,6 +34,7 @@ function App() {
   }
   return (
     <Content>
+      <NarutoLogo src={logo} alt='Narutos Logo' />
       <Quotes 
       /*quote={quoteState.quote} speaker={quoteState.speaker} */
       {...quoteState}/*operador spread*/
@@ -55,4 +56,12 @@ const NarutoImg = styled.img`
   width: 50vw;
   align-self: flex-end;
 `;
+const NarutoLogo= styled.img`
+  width: 200px;
+  height: 100px;
+  align-self: flex-start;
+  margin:50px;
+  transform: rotate(-30deg);
+`
+
 export default App;
