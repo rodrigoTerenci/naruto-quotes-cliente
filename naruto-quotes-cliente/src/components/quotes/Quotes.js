@@ -26,12 +26,13 @@ const Wrapper = styled.div`
 `
 
 const Quote= styled.p`
-    font-size: 1em;
+    flex:1;
     margin: 0;
     text-shadow: 2px 2px 2px black;
 `
 
 const Speaker = styled(Quote)`
     text-align:right;
-    margin-bottom: 30px;
+    width:100%;
+    margin: 30px;
 `

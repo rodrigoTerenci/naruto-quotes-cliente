@@ -34,7 +34,7 @@ function App() {
   }
   return (
     <Content>
-      <NarutoLogo src={logo} alt='Narutos Logo' />
+      <NarutoLogo src={logo}/>
       <Quotes 
       /*quote={quoteState.quote} speaker={quoteState.speaker} */
       {...quoteState}/*operador spread*/
@@ -53,15 +53,16 @@ const Content = styled.div`
   align-items: center;
 `;
 const NarutoImg = styled.img`
+  padding-top:95px;
   width: 50vw;
   align-self: flex-end;
 `;
 const NarutoLogo= styled.img`
-  width: 200px;
-  height: 100px;
+  width: 100vw;
+  height: 80px;
   align-self: flex-start;
   margin:50px;
-  transform: rotate(-30deg);
+  transform: rotate(-15deg);
 `
 
 export default App;
