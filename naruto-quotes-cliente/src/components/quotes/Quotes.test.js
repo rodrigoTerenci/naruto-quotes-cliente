@@ -5,10 +5,10 @@ const quote = 'test quote'
 const speaker = 'random speaker'
 
 test('renders received quote, speaker and a button', () => {
-    render(<Quotes quote={quote} speaker={speaker}/>)
+    render(<Quotes quote={quote} speaker= {speaker}/>)
 
     const quoteEl = screen.getByText(quote)
-    const speakerEl = screen.getByText(speaker)
+    const speakerEl = screen.getByText(/random speaker/i)
     const buttonEl = screen.getByRole('button')
 
     expect(quoteEl).toBeInTheDocument()
