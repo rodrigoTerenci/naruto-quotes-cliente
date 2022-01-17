@@ -41,7 +41,7 @@ function App() {
       onUpdate={onUpdate}/>
       <NarutoImg src={narutoImg} alt='Naruto with a Kunai'/>
     </Content>
-  );
+  )
 }
 const Content = styled.div`
   height: 100vh;

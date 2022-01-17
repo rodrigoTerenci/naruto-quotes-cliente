@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     background: url(${bgImg}) center no-repeat;  
     background-size: cover;
     color: #fff;
-    padding: 0;
+    padding:0;
     margin: 0;
     font-family: 'New Tegomin', serif;
     font-size:1.3m;
