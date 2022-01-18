@@ -9,11 +9,12 @@ test('renders received quote, speaker and a button', () => {
 
     const quoteEl = screen.getByText(quote)
     const speakerEl = screen.getByText(/random speaker/i)
-    const buttonEl = screen.getByRole('button')
+    const buttonEl = screen.getAllByRole('button')
 
     expect(quoteEl).toBeInTheDocument()
     expect(speakerEl).toBeInTheDocument()
-    expect(buttonEl).toBeInTheDocument()
+    
+    expect(buttonEl).toHaveLength(4)
 
 });
 

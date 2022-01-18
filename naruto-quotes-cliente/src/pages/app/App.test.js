@@ -7,15 +7,15 @@ import {getQuote} from '../../services'
 
 
 
-test('renders the app with a button and a img', () => {
+test('renders the app with  4 buttons, a quote and a img', () => {
   render(<App />);
   const textEl = screen.getByText('loading speaker')
   const imgEl = screen.getByRole('img')
-  const buttonEl = screen.getByRole('button')
+  const buttonEl = screen.getAllByRole('button')
 
   expect(textEl).toBeInTheDocument()
   expect(imgEl).toBeInTheDocument()
-  expect(buttonEl).toBeInTheDocument()
+  expect(buttonEl).toHaveLength(4)
 
 });
 /*MOKANDO SERVER*/
@@ -36,7 +36,7 @@ test('transform json response into object', async () =>{
   expect(quote).toStrictEqual(response)
 })
 
-test('call api on button click and update its text', async ()=>{
+test('call api on button -Quotes no Jutsu- click and update its text', async ()=>{
  render(<App />)
 
  const buttonEl = screen.getByRole('button')
