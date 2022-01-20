@@ -6,6 +6,7 @@ import {Quotes} from '../../components'
 import { getQuote } from '../../services'
 import { useState, useEffect, useRef } from 'react' /*HOOKS*/
 import  jutsoSound  from '../../sound/jutsoSound.mp3'
+import { Quest } from '../../components/quest'
 
 const audio = new Audio(jutsoSound)
 function App() {
@@ -39,6 +40,7 @@ function App() {
       /*quote={quoteState.quote} speaker={quoteState.speaker} */
       {...quoteState}/*operador spread*/
       onUpdate={onUpdate}/>
+      <Quest></Quest>
       <NarutoImg src={narutoImg} alt='Naruto with a Kunai'/>
     </Content>
   )
