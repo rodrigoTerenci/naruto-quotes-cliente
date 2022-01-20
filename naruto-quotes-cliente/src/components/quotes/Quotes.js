@@ -29,7 +29,6 @@ const Wrapper = styled.div`
 `
 const Quote= styled.p`
     flex:1;
-    text-shadow: 2px 2px 2px black;
 `
 
 const Speaker = styled(Quote)`

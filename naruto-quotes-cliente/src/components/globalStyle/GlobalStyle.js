@@ -10,5 +10,6 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: 'New Tegomin', serif;
     font-size:1.3m;
+    text-shadow: 2px 2px 2px black;
   }
 `

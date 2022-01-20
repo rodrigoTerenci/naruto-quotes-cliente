@@ -35,12 +35,12 @@ function App() {
   }
   return (
     <Content>
-      <NarutoLogo src={logo}/>
+      
       <Quotes 
       /*quote={quoteState.quote} speaker={quoteState.speaker} */
       {...quoteState}/*operador spread*/
       onUpdate={onUpdate}/>
-      <Quest></Quest>
+      <Quest resposta={quoteState.speaker}></Quest>
       <NarutoImg src={narutoImg} alt='Naruto with a Kunai'/>
     </Content>
   )

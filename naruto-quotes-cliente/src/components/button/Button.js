@@ -14,4 +14,4 @@ export const Button = styled.button`
         background: #a40000;
         transform: scale(0.95);
     }
-`;
+`

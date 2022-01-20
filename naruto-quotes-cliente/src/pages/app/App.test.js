@@ -13,6 +13,7 @@ test('renders the app with  4 buttons, a quote and a img', () => {
   const imgEl = screen.getByRole('img')
   const buttonEl = screen.getAllByRole('button')
 
+  console.log(buttonEl[0].children)
   expect(textEl).toBeInTheDocument()
   expect(imgEl).toBeInTheDocument()
   expect(buttonEl).toHaveLength(4)
@@ -39,9 +40,9 @@ test('transform json response into object', async () =>{
 test('call api on button -Quotes no Jutsu- click and update its text', async ()=>{
  render(<App />)
 
- const buttonEl = screen.getByRole('button')
+ const buttonEl = screen.getAllByRole('button')
 
- fireEvent.click(buttonEl)
+ fireEvent.click(buttonEl[0])
 
  const quoteEl = await screen.findByText(response.quote)
 
