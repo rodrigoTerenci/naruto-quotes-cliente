@@ -1,23 +1,27 @@
-//import { Button } from "../button"
-import { getQuote } from '../../services/'
-import { useState } from "react"
 import styled from "styled-components"
 
 export const Quest = (({resposta}) =>{
-    const nomes= ['Naruto', 'Orochimaru']
-    const apagaNome = nomes.filter((item)=> item != resposta)
+    let nomes= ['Naruto Uzumaki', 'Orochimaru', 'Haku', 'Iruka Umino']
+    /*let apagaIndex= nomes.indexOf('Naruto Uzumaki')
+       nomes.splice(apagaIndex)*/
+
+    let apagaNome = nomes.filter((item) => item !== resposta)
     const random = (()=> parseInt(Math.random() * apagaNome.length))
-    var r = random()
-    
+    let r = random()
+    let randomName = (r)=>apagaNome[r]
+
+    const confereResposta = ((child)=>{
+        return child === resposta ? true : false
+     })
+     
     return(
         <QuestTag>
             <p>Who sayed???</p>
-            <Button>{apagaNome[r]}</Button>
-            <Button>{apagaNome[r]}</Button>
-            <Button>{resposta}</Button>
+            <Button onClick= {confereResposta(randomName)}>{randomName(r)}</Button>
+            <Button onClick= {confereResposta(randomName)}>{randomName(r)}</Button>
+            <Button onClick= {confereResposta(resposta)}>{resposta}</Button>
         </QuestTag>
-    )
-    
+    )    
 })
 const QuestTag = styled.div`
         flex-direction:row;
