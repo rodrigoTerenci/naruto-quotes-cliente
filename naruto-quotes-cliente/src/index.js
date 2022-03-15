@@ -4,14 +4,13 @@ import './index.css';
 import { GlobalStyle } from './components/';
 import App from './pages/app/App';
 import reportWebVitals from './reportWebVitals';
-import QRCode from "react-qr-code";
+//import QRCode from "react-qr-code"; <QRCode value="https://3000-rodrigoterenci-narutoquo-0mtns68rywh.ws-us31.gitpod.io" />
 
 
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <QRCode value="https://3000-rodrigoterenci-narutoquo-0mtns68rywh.ws-us31.gitpod.io" />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

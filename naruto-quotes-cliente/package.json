@@ -44,11 +44,10 @@
   "devDependencies": {
     "@testing-library/react": "^11.2.5"
   },
-  {
   "buildpacks": [
     {
       "url": "mars/create-react-app"
     }
   ]
 }
-}
+
